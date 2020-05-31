@@ -51,7 +51,7 @@ void c_p_c() {
 	freopen("output.txt", "w", stdout);
 #endif
 }
-
+// Checking if the current placement queen satisfies the condition
 bool isSafe( VVC& graph , int row , int col ) {
 	int i , j , n = graph.size() ;
 	for ( int i = col ; i >= 0 ; i-- ) {
@@ -71,10 +71,11 @@ bool isSafe( VVC& graph , int row , int col ) {
 			return false ;
 		}
 	}
-  
+
 	return true ;
 }
 
+// Solving the graph for each of the column
 bool solve( VVC& graph , int col ) {
 
 	int n = graph.size() ;
@@ -93,6 +94,7 @@ bool solve( VVC& graph , int col ) {
 	return false ;
 }
 
+// Printing the graph
 void print_graph( VVC& graph ) {
 
 	for ( int i = 0 ; i < graph.size() ; i++) {
